@@ -1,0 +1,232 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+:root {
+	--Gray: hsl(0, 0%, 59%);
+	--Very-Dark-Blue: hsl(209, 33%, 12%);
+	--Pale-Blue: hsl(223, 100%, 88%);
+	--Blue: hsl(223, 87%, 63%);
+	--LightRed: hsl(354, 100%, 66%);
+}
+
+html {
+	font-size: 20px;
+}
+
+body {
+	margin: 0;
+	font-family: "Libre Franklin", sans-serif;
+}
+
+img {
+	width: 100%;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* generic classes */
+.transitioned-state {
+	transition: all 0.25s ease-in-out;
+}
+
+/* header section */
+.page-header {
+	padding-block: 4.5rem 2rem;
+}
+
+.site-logo-container {
+	margin: auto;
+	width: 3rem;
+}
+
+/* main section */
+.main-content {
+	margin-bottom: 6rem;
+}
+
+/* hero section */
+.hero-section {
+	padding-inline: 1.3rem;
+	text-align: center;
+}
+
+.hero-content {
+	margin-bottom: 3rem;
+}
+
+.hero-content .h-group h1 {
+	font-weight: normal;
+	font-size: 1.1rem;
+	color: var(--Gray);
+}
+
+.hero-content .h-group h1 strong {
+	color: initial;
+}
+
+.hero-content .h-group p {
+	font-size: 0.7rem;
+	font-weight: 300;
+}
+
+/* Launch Notify form */
+.form-inner-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	width: 90%;
+	max-width: 15.45rem;
+	margin: auto;
+}
+
+.form-inner-wrapper * {
+	width: 100%;
+}
+
+#launch-notify-email {
+	outline: none;
+	border: 1.5px solid var(--Pale-Blue);
+	box-sizing: border-box;
+	padding-left: 1.4rem;
+}
+
+#launch-notify-email::placeholder {
+	color: var(--Pale-Blue);
+}
+
+#launch-notify-email.required:invalid {
+	border-color: var(--LightRed);
+}
+
+.error-message {
+	font-size: 0.5rem;
+	font-weight: 300;
+	font-style: italic;
+	color: rgb(236, 11, 11);
+	margin-block: 0.5rem 1rem;
+	display: none;
+}
+
+.error-message.active {
+	display: block;
+}
+
+#launch-notify-email,
+.submit-btn {
+	border-radius: 1rem;
+	padding-block: 0.6rem;
+	font-size: 0.65rem;
+}
+
+.submit-btn {
+	border: none;
+	background-color: var(--Blue);
+	color: white;
+	font-weight: 300;
+	cursor: pointer;
+	box-shadow: 0 0.3rem 0.5rem var(--Pale-Blue);
+}
+
+.submit-btn:is(:hover, :focus, :active) {
+	background-color: hsla(223, 87%, 63%, 0.8);
+}
+
+/* Page footer */
+.social-media-list-wrapper {
+	display: flex;
+	justify-content: center;
+	gap: 0.6rem;
+}
+
+.social-media-link {
+	box-sizing: border-box;
+	border: 1px solid var(--Gray);
+	border-radius: 50%;
+	color: var(--Blue);
+	padding: 0.3rem;
+	display: inline-flex;
+	align-items: center;
+	height: calc(22rem / 15);
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+
+.social-media-link:is(:hover, :active, :focus) {
+	background-color: var(--Blue);
+	color: white;
+	font-weight: normal;
+}
+
+.copyright-statement {
+	text-align: center;
+	font-size: 0.55rem;
+	color: var(--Gray);
+}
+
+/* media breakpoints */
+@media (min-width: 768px) {
+	/* main content section */
+	.main-content {
+		margin-bottom: 4rem;
+	}
+
+	/* hero section */
+	.h-group {
+		margin-bottom: 1.5rem;
+	}
+
+	.hero-content .h-group h1 {
+		font-size: 2rem;
+		margin-block: 0;
+	}
+
+	.hero-content .h-group p {
+		margin-top: 0.5em;
+	}
+
+	.hero-image-container {
+		max-width: 36.56rem;
+		margin: auto;
+	}
+
+	/* launch notify email form */
+	.form-inner-wrapper {
+		max-width: 27.5rem;
+		flex-direction: row;
+		align-items: flex-start;
+	}
+
+	.form-inner-wrapper > * {
+		flex: 1;
+	}
+
+	.submit-btn {
+		flex-basis: 30%;
+		flex-grow: 0;
+	}
+
+	/* page footer */
+	.social-media-link {
+		font-size: 0.6rem;
+		height: calc(19rem / 15);
+	}
+}
+
+/* Project credits */
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+	text-decoration: underline;
+}
